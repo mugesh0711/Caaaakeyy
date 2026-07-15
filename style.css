@@ -1,0 +1,474 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.head>h1 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #467235;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FFF78D;
+    padding: 20px;
+
+}
+
+.head>img {
+    height: 40px;
+    width: 40px;
+}
+
+.btn1 {
+    display: inline;
+    animation-name: top;
+    animation-duration: 1s;
+}
+
+.head {
+    display: inline-flex;
+    animation-name: top;
+    animation-duration: 1s;
+}
+
+.navibar>nav>a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.navibar {
+    animation-name: top;
+    animation-duration: 1s;
+}
+
+.btn1>button {
+    margin-left: 30px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 50px;
+    border: 1px solid;
+    background-color: #467235;
+    color: #FFF78D;
+}
+
+.navibar>nav>a:hover {
+    color: #467235;
+}
+
+.btn1>button:hover {
+    cursor: pointer;
+}
+
+.content>button:hover {
+    cursor: pointer;
+}
+
+#img {
+    background-image: url(photo/ai-generated-cake-picture.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1351px;
+    height: 525px;
+    animation-name: cake;
+    animation-duration: 1s;
+}
+
+.content>h1 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: #467235;
+    animation-name: side;
+    animation-duration: 1.5s;
+}
+
+.content {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 70px;
+}
+
+.content>h3 {
+    padding-top: 30px;
+    color: #000000;
+}
+
+.content>button {
+    margin-top: 30px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 50px;
+    background-color: #467235;
+    color: #FFF78D;
+    border: none;
+}
+
+.content>button:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.content>button:active {
+    transform: scale(0.7);
+}
+
+.btn1>button:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.btn1>button:active {
+    transform: scale(0.7);
+}
+
+@keyframes side {
+    from {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes top {
+    from {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes cake {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.imp {
+    background-color: #FFF78D;
+    padding: 10px;
+}
+
+.imp>marquee {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #467235;
+}
+
+.inn {
+    padding: 40px;
+    text-align: center;
+
+    background-color: #467235;
+
+}
+
+.inn>input {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px #467235 solid;
+    outline: none;
+    background-color: #FFF78D;
+    margin-top: 40px;
+}
+
+.inn>button {
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    right: 75px;
+    color: rgb(0, 0, 0);
+    border: 2px solid;
+}
+
+.menubar {
+    width: 1351px;
+    height: 640px;
+    background-color: #467235;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 90px;
+}
+
+#box1 {
+    width: 280px;
+    height: 250px;
+    background-color: #FFF78D;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-image: url(photo/heart-shaped-red-velvet-cake-dark.webp);
+    background-position: top;
+    background-size: cover;
+    animation: box1 2s;
+      animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+#box2 {
+    width: 280px;
+    height: 250px;
+    background-color: #FFF78D;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-image: url(photo/cake-with-strawberry-jam-cream-dough-cinnamon.webp);
+    background-position: center;
+    background-size: cover;
+     animation: box2 1s;
+       animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+#box3 {
+    width: 280px;
+    height: 250px;
+    background-color: #FFF78D;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-image: url(photo/side_view_fruit_cake_with_strawberry_kiwi_cup_tea_rag_napkins.webp);
+    background-position: center;
+    background-size: cover;
+     animation: box3 1s;
+       animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+#box4 {
+    width: 280px;
+    height: 250px;
+    background-color: #FFF78D;
+    border-radius: 30px;
+    background-image: url(photo/close-up-view-cheesecake-sliced-wooden-plate.webp);
+    background-position: center;
+    background-size: cover;
+     animation: box4 1s;
+       animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+#box5 {
+    width: 280px;
+    height: 250px;
+    background-color: #FFF78D;
+    border-radius: 30px;
+    background-image: url(photo/Close-up\ view\ of\ chocolate\ cake\ concept\ _\ Free\ Photo.jpg);
+    background-position: center;
+    background-size: cover;
+     animation: box5 1s;
+       animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+#box6 {
+    width: 280px;
+    height: 250px;
+    background-color: #FFF78D;
+    border-radius: 30px;
+    background-image: url(photo/piece-cake.webp);
+    background-position: bottom;
+    background-size: cover;
+     animation: box6 1s;
+       animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+h1 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #467235;
+    font-size: x-large;
+}
+
+#box1>h1 {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#box1>button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    background-color: #467235;
+    color: #FFF78D;
+    border: none;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+#box2>h1 {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#box2>button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    background-color: #467235;
+    color: #FFF78D;
+    border: none;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+#box3>h1 {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#box3>button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    background-color: #467235;
+    color: #FFF78D;
+    border: none;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+#box4>h1 {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#box4>button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    background-color: #467235;
+    color: #FFF78D;
+    border: none;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+#box5>h1 {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#box5>button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    background-color: #467235;
+    color: #FFF78D;
+    border: none;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+#box6>h1 {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#box6>button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    background-color: #467235;
+    color: #FFF78D;
+    border: none;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+.box:hover{
+    transform: translateY(-8px);
+    transition: 0.3s;
+}
+.box{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    
+    animation: opacity 1s;
+  
+}
+@keyframes box1{
+    from {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes box4{
+    from {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes box3{
+    from {
+        opacity: 0;
+        transform: translateX(90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes box6{
+    from {
+        opacity: 0;
+        transform: translateX(90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes box2{
+    from {
+        opacity: 0;
+        transform: scale(1.20);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1px);
+    }
+}
+@keyframes box5{
+    from {
+        opacity: 0;
+        transform: scale(1.20);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1px);
+    }
+}

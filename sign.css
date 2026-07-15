@@ -1,0 +1,162 @@
+*{
+    padding: 0px;
+    margin: 0px;
+     font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.sideimg{
+    background-image: url(https://i.pinimg.com/736x/ba/9e/4b/ba9e4b2faf22ef7c24835bbca607849c.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 570px;
+    height: 590px;
+    border-top-left-radius: 190px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 300px;
+    margin: 10px;
+   display: flex;
+    align-content: center;
+   justify-content: space-between;
+   
+}
+.btn5>button{
+     padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background:transparent;
+    color:white ;
+    margin-left: 15px;
+}
+.header>h1{
+      font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #467235;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.btn5{
+     margin-top: 30px;
+  margin-left:150px;
+}
+.btn5>a{
+    
+    text-decoration: none;
+    color: white;
+}
+.part{
+    display: flex;
+    
+}
+.background{
+    background-color:#6ba156;
+    text-align: center;
+    position: absolute;
+    left: 37%;
+    
+    padding: 80px 50px 80px 50px;
+    margin-left: 290px;
+    border-radius: 20px;
+}
+.inp1,.inp2{
+    margin-top: 40px;
+}
+.check{
+    margin-top: 40px;
+    }
+.btn2{
+    margin-top: 40px;
+}
+.inp1>input{
+    padding: 10px 60px 10px 60px;
+    border-radius: 50px;
+    border: 1px solid black;
+    outline: none;
+    background: transparent;
+}
+.inp2>input{
+    padding: 10px 60px 10px 60px;
+    border-radius: 50px;
+     border: 1px solid black;
+       outline: none;
+       background: transparent;
+}
+.check a{
+    margin-left: 30px;
+}
+.btn3>button{
+    padding: 10px 20px 10px 30px;
+    border-radius: 20px;
+    border: 2px  solid;
+    background-color:#FFF78D;
+    color: #6ba156;
+    border: none;
+}
+.btn3>button:nth-child(2){
+    margin-left: 40px;
+}
+.btn2>button{
+     padding: 10px 60px 10px 60px;
+    border-radius: 20px;
+    border: 2px  solid;
+    background-color:#FFF78D ;
+    color: #6ba156;
+    border: none;
+}
+hr{
+    margin-top: 40px;
+}
+.inp1>label{
+    position: relative;
+    left: 35px;
+    top: 5px;
+}
+.inp2>label{
+   
+    position: relative;
+    left: 35px;
+    top: 5px;
+}
+.btn3{
+    margin-top: 20px;
+    margin-left: -50px;
+}
+.signin>h1{
+      font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF78D;
+}
+body{
+    background-color: #6ba156;
+}
+input::placeholder{
+    color: black;
+}
+.btn3>.lab1>img{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 70px;
+    top: 3px;
+}
+.btn3>.lab2>img{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 30px;
+    top: 3px;
+}
+.round{
+    width: 30px;
+    height: 30px;
+    background-color: #467235;
+    position: relative;
+    top: 550px;
+    right: 530px;
+    border-radius: 50%;
+}
