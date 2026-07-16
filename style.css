@@ -21,7 +21,7 @@
     justify-content: space-evenly;
     background-color: #FFF78D;
     padding: 20px;
-
+    
 }
 
 .head>img {
@@ -120,7 +120,7 @@
 }
 
 .content>button:active {
-    transform: scale(0.7);
+    transform: scale(0.9);
 }
 
 .btn1>button:hover {
@@ -129,7 +129,7 @@
 }
 
 .btn1>button:active {
-    transform: scale(0.7);
+    transform: scale(0.9);
 }
 
 @keyframes side {
@@ -209,7 +209,7 @@
 
 .menubar {
     width: 1351px;
-    height: 640px;
+    height: 790px;
     background-color: #467235;
     display: flex;
     flex-wrap: wrap;
@@ -400,6 +400,10 @@ h1 {
     transform: translateY(-8px);
     transition: 0.3s;
 }
+.box>button:active{
+    transform: scale(0.9);
+
+}
 .box{
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     
@@ -471,4 +475,24 @@ h1 {
         opacity: 1;
         transform: scale(1px);
     }
+}
+.footer{
+    background-color: #467235;
+      width: 1351px;
+      height: 200px;
+}
+.footer>footer{
+    text-align: center;
+}
+footer>a{
+    padding: 50px;
+    text-decoration: none;
+    color: white;
+}
+footer h2{
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+a>label{
+    margin-top: 40px;
 }
