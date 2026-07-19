@@ -8,7 +8,7 @@
 }
 .round1{
     padding: 10px;
-    background: transparent;
+    background: #467235;
     border: 1px solid #467235;
     position: absolute;
     border-radius:100%;
@@ -16,7 +16,7 @@
 }
 .round2{
     padding: 10px;
-   background: transparent;
+   background: #467235;
    border: 1px solid #467235;
     position: absolute;
     border-radius:100%;
@@ -24,7 +24,7 @@
 }
 .round3{
     padding: 10px;
-    background: transparent;
+    background: #467235;
     border: 1px solid #467235;
     position: absolute;
     border-radius:100%;
@@ -32,40 +32,56 @@
 }
 .content{
     display: flex;
-     background-color: #FFF78D;
+     background-image: url(photo/ai-generated-cake-picture.webp);
     height: 607px;
      justify-content: space-evenly;
+    background-position: center;
+    background-size: cover;
 }
 .contentone{
     margin-top: 120px;
+     animation-name: top;
+     animation-duration: 1s;
+     color: black;
+     
 }
 .contenttwo{
     margin-top: 120px;
+     animation-name: top;
+     animation-duration: 1s;
+       color: black;
 }
 .input1{
     padding: 5px 10px 5px 10px;
     outline: none;
     background: transparent;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
+  color: black;
 }
 .input3{
      padding: 5px 200px 5px 10px;
      outline: none;
      background: transparent;
-     border: 1px solid black;
+     border: 1px solid rgb(0, 0, 0);
+    color: black;
 }
 .input4{
      padding: 5px 200px 90px 10px;
      outline: none;
      background: transparent;
-     border: 1px solid black;
+     border: 1px solid rgb(0, 0, 0);
+     color: black;
 
+}
+input::placeholder{
+    color: black;
 }
 
 
 .contentone>h1{
       font-family: "Unbounded", sans-serif;
     font-optical-sizing: auto;
+    
 }
 .contenttwo>h1{
       font-family: "Unbounded", sans-serif;
@@ -84,4 +100,14 @@
     border: 1px solid #467235;
     background-color: #467235;
     color: #FFF78D;
+}
+@keyframes top {
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to{
+       transform: translateY(0px);
+       opacity: 1;
+    }
 }

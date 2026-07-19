@@ -1,0 +1,96 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.back{
+  
+    width: 1365px;
+    height: 607px;
+     background-image: url(photo/front-view-delicious-chocolate-cake-concept.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.right{
+    position: relative;
+    width: 600px;
+    height: 570px;
+    background: transparent;
+    border: solid #FFF78D 1px;
+    left: 60px;
+    border-radius: 20px;
+    top: 15px;
+    
+}
+ .left1>h1{
+     font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color:  #467235;
+ }
+ .left{
+    display: flex;
+    
+    gap: 160px;
+    
+ }
+ .back{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ .left{
+    margin-top: 50px;
+ }
+ .right1{
+    margin-top: 12px;
+ }
+ .right1>label,img{
+    margin-bottom: -2px;
+    color: white;
+ }
+ .right1>a{
+    color: white;
+    text-decoration: none;
+ }
+ .right3{
+      text-align: center;
+      margin-top: 80px;
+      color: #467235;
+ }
+ .google{
+    margin-top: 30px;
+    padding:  10px 70px 10px 70px;
+    border: #467235 solid 1px;
+    background-color: #467235;
+    color: #FFF78D;
+    border-radius: 50px;
+ }
+ .login{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 30px 10px 30px;
+     border: #467235 solid 1px;
+    background-color: #467235;
+    color: #FFF78D;
+    border-radius: 50px;
+ }
+ .right3>input{
+    margin-top: 30px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+ }
+ .password,.email{
+    padding: 5px 90px 5px 90px;
+ }
+.right3>a{
+    margin-left: 70px;
+}
+hr{
+    color: black;
+}
