@@ -20,7 +20,7 @@
    border: 1px solid #467235;
     position: absolute;
     border-radius:100%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .round3{
     padding: 10px;
@@ -28,10 +28,11 @@
     border: 1px solid #467235;
     position: absolute;
     border-radius:100%;
-    margin-top: 180px;
+    margin-top: 80px;
 }
 .content{
     display: flex;
+    flex-wrap: wrap;
      background-image: url(photo/ai-generated-cake-picture.webp);
     height: 607px;
      justify-content: space-evenly;
@@ -110,4 +111,52 @@ input::placeholder{
        transform: translateY(0px);
        opacity: 1;
     }
+}
+.phone{
+    position: relative;
+    left: 70px;
+    top: 18px;
+    opacity: 0;
+
+}
+.round1:hover + .phone{
+    opacity: 1;
+    transition: 1s ;
+    transform: translateX(8px);
+}
+.phone>h3{
+    font-weight: 700;
+}
+.email{
+    position: relative;
+    left: 70px;
+    top: 50px;
+    opacity: 0;
+}
+.round2:hover + .email{
+    opacity: 1;
+    transition: 1s ;
+    transform: translateX(8px);
+}
+.address{
+    position: relative;
+    left: 70px;
+    top: 80px;
+    opacity: 0;
+}
+.round3:hover + .address{
+    opacity: 1;
+    transition: 1s ;
+    transform: translateX(8px);
+}
+.email>h3{
+    font-weight: 700;
+}
+.address>h3{
+    font-weight: 700;
+}
+p{
+     font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    
 }
