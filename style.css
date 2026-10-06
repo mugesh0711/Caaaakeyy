@@ -1,503 +1,373 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* =========================================================
+   Home page (index.html)
+   ========================================================= */
 
-}
+/* ---------- Hero ---------- */
 
-.head>h1 {
-    font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color: #467235;
-}
-
-.heading {
+.hero {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: #FFF78D;
-    padding: 20px;
-    
+    min-height: clamp(520px, 82vh, 720px);
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(255, 247, 141, .92) 0%, rgba(255, 247, 141, .75) 38%, rgba(255, 247, 141, 0) 70%),
+        url(photo/opt/hero-cheesecake-1600.webp) center / cover no-repeat;
+    animation: heroFade 1.2s ease both;
 }
 
-.head>img {
-    height: 40px;
-    width: 40px;
-}
-
-.btn1 {
-    display: inline;
-    animation-name: top;
-    animation-duration: 1s;
-}
-
-.head {
-    display: inline-flex;
-    animation-name: top;
-    animation-duration: 1s;
-}
-
-.navibar>nav>a {
-    padding: 20px;
-    text-decoration: none;
-    color: black;
-}
-
-.navibar {
-    animation-name: top;
-    animation-duration: 1s;
-}
-nav>a:nth-child(1){
-    color: #467235;
-    text-decoration: underline;
-}
-
-.btn1>button {
-    margin-left: 30px;
-    padding: 10px 25px 10px 25px;
-    border-radius: 50px;
-    border: 1px solid;
-    background-color: #467235;
-    color: #FFF78D;
-}
-
-.navibar>nav>a:hover {
-    color: #467235;
-    text-decoration: underline;
-}
-
-.btn1>button:hover {
-    cursor: pointer;
-}
-
-.content>button:hover {
-    cursor: pointer;
-}
-
-#img {
-    background-image: url(photo/menthol-cheesecake-with-mint-leaves-it-raspberries-_1_.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 1351px;
-    height: 525px;
-    animation-name: cake;
-    animation-duration: 1s;
-}
-
-.content>h1 {
-    font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    color: #467235;
-    animation-name: side;
-    animation-duration: 1.5s;
-}
-
-.content {
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 70px;
-}
-
-.content>h3 {
-    padding-top: 30px;
-    color: #000000;
-}
-
-.content>button {
-    margin-top: 30px;
-    padding: 10px 40px 10px 40px;
-    border-radius: 50px;
-    background-color: #467235;
-    color: #FFF78D;
-    border: none;
-}
-
-.content>button:hover {
-    transform: scale(1.05);
-    transition: 1s;
-}
-
-.content>button:active {
-    transform: scale(0.9);
-}
-
-.btn1>button:hover {
-    transform: scale(1.05);
-    transition: 1s;
-}
-
-.btn1>button:active {
-    transform: scale(0.9);
-}
-
-@keyframes side {
-    from {
-        opacity: 0;
-        transform: translateX(-90px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes top {
-    from {
-        opacity: 0;
-        transform: translateY(-90px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes cake {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.imp {
-    background-color: #FFF78D;
-    padding: 10px;
-}
-
-.imp>marquee {
-    font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: #467235;
-}
-
-.inn {
-    padding: 40px;
-    text-align: center;
-
-    background-color: #467235;
-
-}
-
-.inn>input {
-    padding: 10px;
-    border-radius: 20px;
-    border: 2px #467235 solid;
-    outline: none;
-    background-color: #FFF78D;
-    margin-top: 40px;
-}
-
-.inn>button {
-    padding: 10px;
-    border-radius: 20px;
-    outline: none;
-    background-color: transparent;
+.hero-inner {
     position: relative;
-    right: 75px;
-    color: rgb(0, 0, 0);
-    border: 2px solid;
+    z-index: 1;
+    padding-block: 60px;
 }
 
-.menubar {
-    width: 1351px;
-    height: 790px;
-    background-color: #467235;
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: var(--green);
+    color: var(--cream);
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    animation: slideSide 1s var(--ease-out) both;
+}
+
+.hero h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    color: var(--green);
+    font-size: clamp(2.2rem, 7vw, 4.2rem);
+    line-height: 1.08;
+    letter-spacing: -.02em;
+    animation: slideSide 1.2s .1s var(--ease-out) both;
+}
+
+.hero .lead {
+    margin-top: 22px;
+    font-size: clamp(.98rem, 2.2vw, 1.15rem);
+    font-weight: 500;
+    color: var(--ink);
+    animation: slideSide 1.2s .25s var(--ease-out) both;
+}
+
+.hero-actions {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 90px;
+    gap: 14px;
+    margin-top: 32px;
+    animation: fadeUp 1s .45s var(--ease-out) both;
 }
 
-#box1 {
-    width: 280px;
-    height: 250px;
-    background-color: #FFF78D;
-    margin-top: 50px;
-    border-radius: 30px;
-    background-image: url(photo/heart-shaped-red-velvet-cake-dark.webp);
-    background-position: top;
-    background-size: cover;
-    animation: box1 2s;
-      animation-timeline: view();
-    animation-range: entry 0% cover 50%;
+.hero-actions .btn {
+    padding: .9em 2.2em;
+    font-size: 1rem;
 }
 
-#box2 {
-    width: 280px;
-    height: 250px;
-    background-color: #FFF78D;
-    margin-top: 50px;
-    border-radius: 30px;
-    background-image: url(photo/cake-with-strawberry-jam-cream-dough-cinnamon.webp);
-    background-position: center;
-    background-size: cover;
-     animation: box2 1s;
-       animation-timeline: view();
-    animation-range: entry 0% cover 50%;
+.hero-actions .btn:first-child .icon {
+    animation: hop 1.6s ease-in-out infinite;
 }
 
-#box3 {
-    width: 280px;
-    height: 250px;
-    background-color: #FFF78D;
-    margin-top: 50px;
-    border-radius: 30px;
-    background-image: url(photo/side_view_fruit_cake_with_strawberry_kiwi_cup_tea_rag_napkins.webp);
-    background-position: center;
-    background-size: cover;
-     animation: box3 1s;
-       animation-timeline: view();
-    animation-range: entry 0% cover 50%;
+/* floating decorative cakes */
+.hero-float {
+    position: absolute;
+    z-index: 0;
+    width: clamp(46px, 7vw, 90px);
+    filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .35));
+    animation: floatCake 6s ease-in-out infinite;
+    pointer-events: none;
 }
 
-#box4 {
-    width: 280px;
-    height: 250px;
-    background-color: #FFF78D;
-    border-radius: 30px;
-    background-image: url(photo/close-up-view-cheesecake-sliced-wooden-plate.webp);
-    background-position: center;
-    background-size: cover;
-     animation: box4 1s;
-       animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+.hero-float--1 {
+    right: 8%;
+    top: 14%;
 }
 
-#box5 {
-    width: 280px;
-    height: 250px;
-    background-color: #FFF78D;
-    border-radius: 30px;
-    background-image: url(photo/Close-up\ view\ of\ chocolate\ cake\ concept\ _\ Free\ Photo.jpg);
-    background-position: center;
-    background-size: cover;
-     animation: box5 1s;
-       animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+.hero-float--2 {
+    right: 26%;
+    bottom: 10%;
+    animation-delay: -3s;
+    animation-duration: 7s;
 }
 
-#box6 {
-    width: 280px;
-    height: 250px;
-    background-color: #FFF78D;
-    border-radius: 30px;
-    background-image: url(photo/piece-cake.webp);
-    background-position: bottom;
-    background-size: cover;
-     animation: box6 1s;
-       animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+@keyframes floatCake {
+    0%, 100% { transform: translateY(0) rotate(-6deg); }
+    50% { transform: translateY(-22px) rotate(8deg); }
 }
 
-h1 {
-    font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: #467235;
-    font-size: x-large;
+@keyframes heroFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-#box1>h1 {
-    margin-left: 25px;
-    margin-top: 15px;
+/* ---------- Ticker (replaces <marquee>) ---------- */
+
+.ticker {
+    overflow: hidden;
+    background: var(--cream);
+    border-block: 2px solid rgba(70, 114, 53, .15);
+    padding: 12px 0;
 }
 
-#box1>button {
-    padding: 10px 30px 10px 30px;
-    border-radius: 50px;
-    background-color: #467235;
-    color: #FFF78D;
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 22s linear infinite;
+}
+
+.ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+.ticker span {
+    padding-right: 3rem;
+    font-family: var(--font-display);
+    font-size: clamp(.85rem, 2vw, 1rem);
+    color: var(--green);
+    white-space: nowrap;
+}
+
+@keyframes ticker {
+    to { transform: translateX(-50%); }
+}
+
+/* ---------- Search ---------- */
+
+.search-section {
+    padding: clamp(40px, 8vw, 80px) var(--gutter) 20px;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 720px;
+    margin-inline: auto;
+    padding: 6px;
+    border-radius: 999px;
+    background: var(--cream);
+    box-shadow: var(--shadow);
+    transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.search-form:focus-within {
+    box-shadow: 0 0 0 4px rgba(255, 247, 141, .45), var(--shadow);
+    transform: translateY(-2px);
+}
+
+.search-icon {
+    margin-left: 16px;
+    color: var(--green);
+    transition: transform .4s var(--ease-bounce);
+}
+
+.search-form:focus-within .search-icon {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
     border: none;
-    margin-top: 150px;
-    margin-left: 150px;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
 }
 
-#box2>h1 {
-    margin-left: 25px;
-    margin-top: 15px;
+.search-form input::placeholder {
+    color: #6d7a62;
 }
 
-#box2>button {
-    padding: 10px 30px 10px 30px;
-    border-radius: 50px;
-    background-color: #467235;
-    color: #FFF78D;
-    border: none;
-    margin-top: 150px;
-    margin-left: 150px;
+.search-form .btn {
+    --btn-bg: var(--green);
+    --btn-fg: var(--cream);
 }
 
-#box3>h1 {
-    margin-left: 25px;
-    margin-top: 15px;
+/* ---------- Categories ---------- */
+
+.categories {
+    padding: 40px 0 clamp(60px, 10vw, 110px);
 }
 
-#box3>button {
-    padding: 10px 30px 10px 30px;
-    border-radius: 50px;
-    background-color: #467235;
-    color: #FFF78D;
-    border: none;
-    margin-top: 150px;
-    margin-left: 150px;
-}
-
-#box4>h1 {
-    margin-left: 25px;
-    margin-top: 15px;
-}
-
-#box4>button {
-    padding: 10px 30px 10px 30px;
-    border-radius: 50px;
-    background-color: #467235;
-    color: #FFF78D;
-    border: none;
-    margin-top: 150px;
-    margin-left: 150px;
-}
-
-#box5>h1 {
-    margin-left: 25px;
-    margin-top: 15px;
-}
-
-#box5>button {
-    padding: 10px 30px 10px 30px;
-    border-radius: 50px;
-    background-color: #467235;
-    color: #FFF78D;
-    border: none;
-    margin-top: 150px;
-    margin-left: 150px;
-}
-
-#box6>h1 {
-    margin-left: 25px;
-    margin-top: 15px;
-}
-
-#box6>button {
-    padding: 10px 30px 10px 30px;
-    border-radius: 50px;
-    background-color: #467235;
-    color: #FFF78D;
-    border: none;
-    margin-top: 150px;
-    margin-left: 150px;
-}
-.box:hover{
-    transform: translateY(-8px);
-    transition: 0.3s;
-}
-.box>button:active{
-    transform: scale(0.9);
-
-}
-.box{
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    
-    animation: opacity 1s;
-  
-}
-@keyframes box1{
-    from {
-        opacity: 0;
-        transform: translateX(-90px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-@keyframes box4{
-    from {
-        opacity: 0;
-        transform: translateX(-90px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-@keyframes box3{
-    from {
-        opacity: 0;
-        transform: translateX(90px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-@keyframes box6{
-    from {
-        opacity: 0;
-        transform: translateX(90px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-@keyframes box2{
-    from {
-        opacity: 0;
-        transform: scale(1.20);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1px);
-    }
-}
-@keyframes box5{
-    from {
-        opacity: 0;
-        transform: scale(1.20);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1px);
-    }
-}
-.footer{
-    background-color: #467235;
-      width: 1351px;
-      height: 200px;
-}
-.footer>footer{
+.section-title {
     text-align: center;
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--cream);
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    margin-bottom: clamp(28px, 5vw, 50px);
 }
-footer>a{
-    padding: 50px;
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: clamp(20px, 4vw, 48px);
+}
+
+.box {
+    --img: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    padding: 20px 22px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    isolation: isolate;
     text-decoration: none;
-    color: white;
+    background: var(--cream);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+    transition: transform .45s var(--ease-bounce), box-shadow .45s ease, opacity .8s var(--ease-out);
 }
-footer h2{
-    padding-bottom: 20px;
-    font-weight: 600;
+
+/* photo layer (zooms on hover) */
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: var(--img) center / cover no-repeat;
+    transition: transform .8s var(--ease-out);
 }
-a>label{
-    margin-top: 40px;
+
+/* soft shade at the bottom so the button pops */
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0) 40%);
+}
+
+.box h3 {
+    align-self: flex-start;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(255, 247, 141, .94);
+    box-shadow: var(--shadow-sm);
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--green);
+    font-size: clamp(1rem, 2.3vw, 1.25rem);
+    transition: transform .45s var(--ease-bounce);
+}
+
+.box:hover h3 {
+    transform: translateX(6px) rotate(-2deg);
+}
+
+.box .btn {
+    align-self: flex-end;
+    --btn-bg: var(--cream);
+    --btn-fg: var(--green);
+}
+
+.box.is-visible:hover {
+    transform: translateY(-10px) rotate(-.6deg);
+    box-shadow: var(--shadow-lg);
+}
+
+.box:hover::before {
+    transform: scale(1.12);
+}
+
+.box:hover .btn {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .25);
+}
+
+.box:hover .btn {
+    background-position: -50% 0;
+}
+
+#box1 { --img: url(photo/opt/red-velvet-800.webp); }
+#box2 { --img: url(photo/opt/strawberry-jam-cake-800.webp); }
+#box3 { --img: url(photo/opt/fruit-cake-800.webp); }
+#box4 { --img: url(photo/opt/cheesecake-slices-800.webp); }
+#box5 { --img: url(photo/opt/chocolate-raspberry-800.webp); }
+#box6 { --img: url(photo/opt/piece-cake-800.webp); }
+
+#box1::before { background-position: top; }
+#box6::before { background-position: bottom; }
+
+/* stagger the scroll-in animation */
+.category-grid .box:nth-child(2) { --delay: .1s; }
+.category-grid .box:nth-child(3) { --delay: .2s; }
+.category-grid .box:nth-child(5) { --delay: .1s; }
+.category-grid .box:nth-child(6) { --delay: .2s; }
+
+/* ---------- Responsive ---------- */
+
+/* large desktops */
+@media (min-width: 1400px) {
+    .box {
+        min-height: 300px;
+    }
+}
+
+/* tablets */
+@media (max-width: 900px) {
+    .hero {
+        background:
+            linear-gradient(90deg, rgba(255, 247, 141, .92) 0%, rgba(255, 247, 141, .7) 55%, rgba(255, 247, 141, .15) 100%),
+            url(photo/opt/hero-cheesecake-1600.webp) center / cover no-repeat;
+    }
+
+    .hero-float--2 {
+        display: none;
+    }
+}
+
+/* phones */
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        text-align: center;
+        background:
+            linear-gradient(180deg, rgba(255, 247, 141, .95) 0%, rgba(255, 247, 141, .88) 70%, rgba(255, 247, 141, .7) 100%),
+            url(photo/opt/hero-cheesecake-800.webp) center / cover no-repeat;
+    }
+
+    .hero-inner {
+        padding-block: 56px 70px;
+    }
+
+    .hero-content {
+        margin-inline: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-actions .btn {
+        flex: 1 1 100%;
+    }
+
+    .hero-float--1 {
+        right: 6%;
+        top: auto;
+        bottom: 12px;
+    }
+
+    .search-form .btn {
+        padding: .7em 1.2em;
+    }
+
+    .search-icon {
+        margin-left: 10px;
+    }
+
+    .box {
+        min-height: 220px;
+    }
 }

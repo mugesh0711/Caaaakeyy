@@ -1,162 +1,194 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* =========================================================
+   Contact page (contact.html)
+   ========================================================= */
 
+.content {
+    position: relative;
+    min-height: calc(100vh - var(--header-h));
+    background: linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, .25)),
+        url(photo/opt/matcha-cake-1600.webp) center / cover no-repeat;
 }
-.round1{
-    padding: 10px;
-    background: #467235;
-    border: 1px solid #467235;
-    position: absolute;
-    border-radius:100%;
-    margin-top: 20px;
+
+.content-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: clamp(30px, 6vw, 80px);
+    padding-block: clamp(50px, 9vw, 110px);
 }
-.round2{
-    padding: 10px;
-   background: #467235;
-   border: 1px solid #467235;
-    position: absolute;
-    border-radius:100%;
-    margin-top: 50px;
+
+.contentone,
+.contenttwo {
+    color: var(--ink);
 }
-.round3{
-    padding: 10px;
-    background: #467235;
-    border: 1px solid #467235;
-    position: absolute;
-    border-radius:100%;
-    margin-top: 80px;
+
+.contentone {
+    animation: top 1s var(--ease-out) both;
 }
-.content{
+
+.contentone h1,
+.contenttwo h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--green-dark);
+    font-size: clamp(1.5rem, 3.6vw, 2.3rem);
+    line-height: 1.2;
+}
+
+.sub {
+    font-family: var(--font-display);
+    font-size: clamp(.8rem, 1.8vw, .95rem);
+    margin: 12px 0 28px;
+}
+
+/* ---------- Contact details ---------- */
+
+.info-list {
+    list-style: none;
+    display: grid;
+    gap: 22px;
+}
+
+.info {
     display: flex;
-    flex-wrap: wrap;
-     background-image: url(photo/ai-generated-cake-picture.webp);
-    height: 607px;
-     justify-content: space-evenly;
-    background-position: center;
-    background-size: cover;
-}
-.contentone{
-    margin-top: 120px;
-     animation-name: top;
-     animation-duration: 1s;
-     color: black;
-     
-}
-.contenttwo{
-    margin-top: 120px;
-     animation-name: top;
-     animation-duration: 1s;
-       color: black;
-}
-.input1{
-    padding: 5px 10px 5px 10px;
-    outline: none;
-    background: transparent;
-    border: 1px solid rgb(0, 0, 0);
-  color: black;
-}
-.input3{
-     padding: 5px 200px 5px 10px;
-     outline: none;
-     background: transparent;
-     border: 1px solid rgb(0, 0, 0);
-    color: black;
-}
-.input4{
-     padding: 5px 200px 90px 10px;
-     outline: none;
-     background: transparent;
-     border: 1px solid rgb(0, 0, 0);
-     color: black;
-
-}
-input::placeholder{
-    color: black;
+    align-items: center;
+    gap: 16px;
 }
 
+.round {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: var(--shadow-sm);
+    transition: transform .45s var(--ease-bounce);
+}
 
-.contentone>h1{
-      font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    
+.round img {
+    filter: invert(1) brightness(2);
+    transition: transform .45s var(--ease-bounce);
 }
-.contenttwo>h1{
-      font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
+
+.info:hover .round {
+    transform: scale(1.12) rotate(-10deg);
+    animation: pulseRing 1s ease-out;
 }
-.input1{
-    margin-top: 25px;
+
+.info:hover .round img {
+    animation: wiggle .6s ease;
 }
-.input3,.input4{
-    margin-top: 10px;
+
+/* text slides out from the icon on hover (desktop) — always visible on touch screens */
+.info-text {
+    transition: opacity .6s ease, transform .6s var(--ease-out);
 }
-.submit{
-    margin-top: 15px;
-    padding: 10px 138px 10px 138px;
-    border-radius: 30px;
-    border: 1px solid #467235;
-    background-color: #467235;
-    color: #FFF78D;
+
+.info-text h3 {
+    font-weight: 700;
+    font-size: 1rem;
 }
-@keyframes top {
-    from{
-        transform: translateY(-30px);
+
+.info-text a,
+.info-text p {
+    font-family: var(--font-display);
+    font-size: .88rem;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.info-text a:hover {
+    text-decoration: underline;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .info-text {
         opacity: 0;
+        transform: translateX(-12px);
     }
-    to{
-       transform: translateY(0px);
-       opacity: 1;
-    }
-}
-.phone{
-    position: relative;
-    left: 70px;
-    top: 18px;
-    opacity: 0;
 
+    .info:hover .info-text,
+    .info:focus-within .info-text {
+        opacity: 1;
+        transform: translateX(8px);
+    }
 }
-.round1:hover + .phone{
-    opacity: 1;
-    transition: 1s ;
-    transform: translateX(8px);
+
+/* ---------- Form ---------- */
+
+.contenttwo {
+    padding: clamp(22px, 4vw, 36px);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
 }
-.phone>h3{
-    font-weight: 700;
+
+#contact-form {
+    display: grid;
+    gap: 6px;
 }
-.email{
-    position: relative;
-    left: 70px;
-    top: 50px;
-    opacity: 0;
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
-.round2:hover + .email{
-    opacity: 1;
-    transition: 1s ;
-    transform: translateX(8px);
+
+.contenttwo .field input,
+.contenttwo .field textarea {
+    background: rgba(255, 255, 255, .7);
+    border-color: rgba(0, 0, 0, .35);
+    resize: vertical;
 }
-.address{
-    position: relative;
-    left: 70px;
-    top: 80px;
-    opacity: 0;
+
+.contenttwo .field input::placeholder,
+.contenttwo .field textarea::placeholder {
+    color: #555;
 }
-.round3:hover + .address{
-    opacity: 1;
-    transition: 1s ;
-    transform: translateX(8px);
+
+.submit {
+    margin-top: 8px;
+    padding-block: .9em;
 }
-.email>h3{
-    font-weight: 700;
+
+.submit:hover .icon {
+    transform: translate(4px, -4px) rotate(10deg);
 }
-.address>h3{
-    font-weight: 700;
+
+.submit.is-sent .icon {
+    animation: sendAway .8s ease forwards;
 }
-p{
-     font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    
+
+@keyframes sendAway {
+    60% { transform: translate(30px, -30px) rotate(20deg); opacity: 0; }
+    61% { transform: translate(-30px, 30px); opacity: 0; }
+    100% { transform: none; opacity: 1; }
+}
+
+@keyframes top {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .content-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        background: linear-gradient(rgba(255, 255, 255, .45), rgba(255, 255, 255, .45)),
+            url(photo/opt/matcha-cake-1600.webp) center / cover no-repeat;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
 }

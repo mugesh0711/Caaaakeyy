@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-    <link rel="stylesheet" href="login.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Log in to Caaaakeyy.">
+    <meta name="theme-color" content="#FFF78D">
+    <title>Log In · Caaaakeyy</title>
+    <link rel="icon" href="photo/cake (1).png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Unbounded:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js" defer></script>
+    <script src="auth.js" defer></script>
 </head>
-<body>
+
+<body data-page="login" class="auth-page">
     <div class="back">
-        <div class="left">
-            <div class="left1">
-            <h1>Caaaakeyy</h1>
-            </div>
+        <header class="auth-top container">
+            <div class="left1"><a href="index.html"><img src="photo/cake (1).png" alt="" width="34" height="34"><h1>Caaaakeyy</h1></a></div>
             <div class="right1">
-              <label for=""><img src="photo/left-chevron.png" width="15" height="15"></label>  <a href="index.html"> Back To Website</a>
+                <a href="index.html"><img src="photo/left-chevron.png" width="15" height="15" alt=""> Back To Website</a>
             </div>
-        </div>
-        <div class="right">
-            <div class="right3">
-              <h1>Welcome Back!</h1>
-              <p>Log in to experience delicious cakes with us </p>
-              <input type="email" class="email" placeholder="Enter Your Email"><br>
-              <input type="password" class="password" placeholder="Enter Password" name="" id="">
-              <br>
-              <input type="checkbox"> <label for="">Remember Me</label><a href="">Forgot password?</a> <br>
-              <button class="login">Login</button>
-             <br>
-              <button class="google"><label for=""><img src="photo/google (1).png" alt="" width="15" height="15"></label>Continue with Google</button>
-              </div>
-        </div>
+        </header>
+
+        <main class="container auth-main">
+            <form class="right3 auth-form" id="login-form" data-mode="login" novalidate>
+                <h2>Welcome Back!</h2>
+                <p class="sub">Log in to experience delicious cakes with us</p>
+                <div class="field">
+                    <label for="l-email" class="sr-only">Email</label>
+                    <input id="l-email" type="email" name="email" class="email" placeholder="Enter Your Email" autocomplete="email" required>
+                    <small class="field-error"></small>
+                </div>
+                <div class="field">
+                    <label for="l-pass" class="sr-only">Password</label>
+                    <div class="pw-wrap">
+                        <input id="l-pass" type="password" name="password" class="password" placeholder="Enter Password" autocomplete="current-password" required>
+                        <button class="eye" type="button" data-toggle-password aria-label="Show password"><img src="photo/eye.png" alt="" width="18" height="18"></button>
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+                <div class="row-between">
+                    <label class="check"><input type="checkbox" name="remember" checked> Remember Me</label>
+                    <a href="#" data-soon="Password reset">Forgot password?</a>
+                </div>
+                <button class="btn btn--block login" type="submit">Login</button>
+                <div class="divider"><span>or</span></div>
+                <button class="btn btn--block google" type="button" data-soon="Google sign-in"><img src="photo/google (1).png" alt="" width="18" height="18">Continue with Google</button>
+                <p class="switch">New to Caaaakeyy? <a href="sign.html#join">Create an account</a></p>
+            </form>
+        </main>
     </div>
 </body>
+
 </html>

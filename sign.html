@@ -2,68 +2,87 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In</title>
-  <link rel="stylesheet" href="sign.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in or join Caaaakeyy.">
+    <meta name="theme-color" content="#FFF78D">
+    <title>Sign In · Caaaakeyy</title>
+    <link rel="icon" href="photo/cake (1).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Unbounded:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="sign.css">
+    <script src="script.js" defer></script>
+    <script src="auth.js" defer></script>
 </head>
 
-<body>
-  <div class="part">
-    <div class="sideimg">
-      <div class="header">
-        <h1>Cakes</h1>
-      </div>
-      <div class="btn5">
-        <a href="login.html">Log In</a>
-        <button>Join Us</button>
-      </div>
-      <div class="round">
-        <img src="photo/user.png" alt="" height="30px" width="30px">
-      </div>
+<body data-page="sign" class="auth-page">
+    <div class="part container">
+        <aside class="sideimg">
+            <div class="side-top">
+                <div class="header"><a href="index.html"><h1>Cakes</h1></a></div>
+                <div class="btn5">
+                    <a href="login.html">Log In</a>
+                    <button type="button" class="join-btn" data-set-mode="register">Join Us</button>
+                </div>
+            </div>
+            <p class="side-quote">Life is short.<br>Eat the cake first.</p>
+            <div class="round" aria-hidden="true">
+                <img src="photo/user.png" alt="" height="30" width="30">
+            </div>
+        </aside>
+
+        <main class="background">
+            <div class="tabs" role="tablist" aria-label="Account">
+                <button type="button" role="tab" class="tab is-active" data-set-mode="login" aria-selected="true">Sign In</button>
+                <button type="button" role="tab" class="tab" data-set-mode="register" aria-selected="false">Join Us</button>
+                <span class="tab-indicator" aria-hidden="true"></span>
+            </div>
+            <form class="auth-form" id="sign-form" data-mode="login" novalidate>
+                <div class="signin">
+                    <h2 data-title>Sign In</h2>
+                </div>
+                <div class="field inp0" data-register-only hidden>
+                    <label for="s-name" class="sr-only">Your name</label>
+                    <div class="inp">
+                        <img src="photo/user.png" alt="" width="20" height="20">
+                        <input id="s-name" name="name" placeholder="Enter Your Name" autocomplete="name">
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+                <div class="field inp1">
+                    <label for="s-email" class="sr-only">Email</label>
+                    <div class="inp">
+                        <img src="photo/message.png" alt="" width="20" height="20">
+                        <input id="s-email" type="email" name="email" placeholder="Enter Your Email" autocomplete="email" required>
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+                <div class="field inp2">
+                    <label for="s-pass" class="sr-only">Password</label>
+                    <div class="inp pw-wrap">
+                        <img src="photo/padlock.png" alt="" width="20" height="20">
+                        <input id="s-pass" type="password" name="password" placeholder="Enter Your Password" autocomplete="current-password" required>
+                        <button class="eye" type="button" data-toggle-password aria-label="Show password"><img src="photo/eye.png" alt="" width="18" height="18"></button>
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+                <div class="check">
+                    <label><input type="checkbox" name="remember" checked> Save Password</label>
+                    <a href="#" data-soon="Password reset" data-login-only>Forgot Password?</a>
+                </div>
+                <div class="btn2">
+                    <button class="btn btn--cream btn--block" type="submit" data-submit-label>Sign In</button>
+                </div>
+                <div class="divider"><span>or continue with</span></div>
+                <div class="btn3">
+                    <button class="btn btn--cream" type="button" data-soon="Google sign-in"><img src="photo/google (1).png" alt="" width="16" height="16">Google</button>
+                    <button class="btn btn--cream" type="button" data-soon="Instagram sign-in"><img src="photo/instagram (1).png" alt="" width="16" height="16">Instagram</button>
+                </div>
+            </form>
+        </main>
     </div>
-
-
-    <div class="background">
-      <div class="signin">
-        <h1>Sign In</h1>
-      </div>
-      <div class="inp1">
-        <label for=""><img src="photo/user.png" alt="" width="20px" height="20px"></label>
-        <input type="email" placeholder="Enter Your Email">
-
-      </div>
-      <div class="inp2">
-        <label for=""><img src="photo/padlock.png" alt="" width="20px" height="20px"></label>
-        <input type="password" placeholder="Enter Your Password">
-      </div>
-      <div class="check">
-
-        <input type="checkbox"><label for="">Save Password</label>
-        <a href="">Fogot Password?</a>
-      </div>
-      <div class="btn2">
-        <button>Sign In</button>
-      </div>
-      <hr>
-
-      <div class="btn3">
-
-        <label for="" class="lab1"><img src="photo/google (1).png" alt=""></label> <button>Google</button>
-
-        <label for="" class="lab2"><img src="photo/instagram (1).png" alt=""></label> <button>Instagram</button>
-      </div>
-
-    </div>
-  </div>
 </body>
 
 </html>
