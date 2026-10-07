@@ -1,0 +1,16 @@
+[
+  { "id": "red-velvet", "name": "Red Velvet", "price": 999, "categories": ["red-velvet"], "image": "photo/opt/red-velvet-800.webp", "description": "Classic crimson sponge layered with silky cream-cheese frosting.", "bestseller": true },
+  { "id": "blueberry-cheesecake", "name": "Blueberry Cheesecake", "price": 599, "categories": ["cheesecake"], "image": "photo/opt/hero-cheesecake-800.webp", "description": "Creamy baked cheesecake on a buttery biscuit base with fresh berries." },
+  { "id": "mocha", "name": "Mocha", "price": 1299, "categories": ["chocolate"], "image": "photo/opt/coffee-cake-800.webp", "description": "Espresso-soaked chocolate layers with a hint of roasted coffee.", "bestseller": true },
+  { "id": "black-forest", "name": "Black Forest Cake", "price": 699, "categories": ["chocolate"], "image": "photo/opt/black-forest-800.webp", "description": "Chocolate sponge, whipped cream and juicy cherries." },
+  { "id": "honey-cake", "name": "Honey Cake", "price": 399, "categories": ["sponge", "butter"], "image": "photo/opt/piece-cake-800.webp", "description": "Soft golden butter sponge glazed with wild honey." },
+  { "id": "cappuccino-cake", "name": "Cappuccino Cake", "price": 1399, "categories": ["chocolate"], "image": "photo/opt/mini-choco-800.webp", "description": "Coffee-cream mousse over a dark chocolate base." },
+  { "id": "vanilla-butter", "name": "Vanilla Butter", "price": 699, "categories": ["butter"], "image": "photo/opt/strawberry-jam-cake-800.webp", "description": "Rich vanilla butter cake with strawberry jam and cream." },
+  { "id": "vanilla-sponge", "name": "Vanilla Sponge", "price": 1199, "categories": ["sponge"], "image": "photo/opt/matcha-cake-800.webp", "description": "Light-as-air vanilla sponge layered with fresh cream." },
+  { "id": "red-velvet-cheesecake", "name": "Red Velvet Cheesecake", "price": 1499, "categories": ["red-velvet", "cheesecake"], "image": "photo/opt/cheesecake-slices-800.webp", "description": "The best of both: red velvet sponge meets New York cheesecake.", "bestseller": true },
+  { "id": "dark-chocolate", "name": "Dark Chocolate", "price": 599, "categories": ["chocolate"], "image": "photo/opt/dark-pastry-800.webp", "description": "Intense 70% dark chocolate ganache with chocolate curls." },
+  { "id": "strawberry-cake", "name": "Strawberry Cake", "price": 499, "categories": ["fruit", "sponge"], "image": "photo/opt/choco-strawberry-800.webp", "description": "Fresh strawberries on a soft cream-filled sponge." },
+  { "id": "white-forest", "name": "White Forest", "price": 999, "categories": ["sponge"], "image": "photo/opt/white-forest-800.webp", "description": "Vanilla sponge, white chocolate shavings and cherries." },
+  { "id": "fresh-fruit-cake", "name": "Fresh Fruit Cake", "price": 899, "categories": ["fruit"], "image": "photo/opt/fruit-cake-800.webp", "description": "Loaded with kiwi, orange and strawberries over chocolate sponge." },
+  { "id": "chocolate-truffle", "name": "Chocolate Truffle Drip", "price": 1099, "categories": ["chocolate"], "image": "photo/opt/glaze-chocolate-800.webp", "description": "Layers of truffle ganache finished with a glossy chocolate drip." }
+]

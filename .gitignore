@@ -1,0 +1,13 @@
+node_modules/
+.env
+.vercel/
+backend/.env
+backend/data/db.json*
+backend/data/.jwt-secret
+
+# Old copies of the first version of the site that ended up inside backend/
+# (the real pages are in the project root). Never upload them.
+backend/*.html
+backend/*.css
+backend/script.js
+backend/photo/

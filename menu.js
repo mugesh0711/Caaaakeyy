@@ -4,7 +4,7 @@
 (function () {
     'use strict';
 
-    const { loadAllProducts, Cart, toast, flyToCart, initReveal, rupees, esc } = window.Cakey;
+    const { loadAllProducts, Cart, toast, flyToCart, initReveal, rupees, esc, OFFLINE_MESSAGE } = window.Cakey;
 
     const grid = document.getElementById('product-grid');
     const empty = document.getElementById('empty-state');
@@ -176,7 +176,7 @@
             grid.setAttribute('aria-busy', 'false');
             empty.hidden = false;
             empty.querySelector('h2').textContent = 'Menu could not load';
-            empty.querySelector('p').textContent = 'Start the backend with "node backend/server.js" and open http://localhost:5000';
+            empty.querySelector('p').textContent = OFFLINE_MESSAGE;
             empty.querySelector('button').hidden = true;
         });
 })();

@@ -13,12 +13,17 @@
 
     // Same origin when served by the backend (http://localhost:5000).
     // When the page is opened from Live Server or as a file, talk to the backend directly.
+    // On Vercel / Railway the API is on the same site, so the base is ''.
+    const IS_LOCAL = ['localhost', '127.0.0.1', ''].includes(window.location.hostname);
     const API_BASE = (() => {
         const { protocol, hostname, port } = window.location;
         if (protocol === 'file:') return 'http://localhost:5000';
         if ((hostname === 'localhost' || hostname === '127.0.0.1') && port !== '5000') return 'http://localhost:5000';
         return '';
     })();
+    const OFFLINE_MESSAGE = IS_LOCAL
+        ? 'Cannot reach the server. Start it with "npm start" in the project folder.'
+        : 'Cannot reach the server. Please check your internet connection and try again.';
 
     async function api(method, path, body) {
         const headers = {};
@@ -37,7 +42,7 @@
                 signal: controller.signal,
             });
         } catch (e) {
-            const err = new Error('Cannot reach the server. Is the backend running? (node backend/server.js)');
+            const err = new Error(OFFLINE_MESSAGE);
             err.offline = true;
             throw err;
         } finally {
@@ -109,10 +114,11 @@
         try {
             productCache = (await api('GET', '/api/products')).products;
         } catch (err) {
-            // Backend offline (e.g. GitHub Pages / Live Server): read the catalog file directly.
-            const res = await fetch('backend/data/products.json');
-            if (!res.ok) throw err;
-            productCache = await res.json();
+            // Backend offline (e.g. Live Server without "npm start"): read the catalog file directly.
+            const res = await fetch('backend/data/products.json').catch(() => null);
+            const list = res && res.ok ? await res.json().catch(() => null) : null;
+            if (!Array.isArray(list)) throw err;
+            productCache = list;
         }
         return productCache;
     }
@@ -698,7 +704,7 @@
 
     // Public helpers for page scripts (menu.js, auth.js, contact.js)
     window.Cakey = {
-        api, Session, Cart, Drawer, toast, setLoading, flyToCart, showFieldErrors,
+        api, Session, Cart, Drawer, toast, setLoading, flyToCart, showFieldErrors, IS_LOCAL, OFFLINE_MESSAGE,
         loadAllProducts, initReveal, rupees, esc, renderAuthState,
     };
 })();
